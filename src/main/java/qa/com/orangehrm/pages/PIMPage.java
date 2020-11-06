@@ -20,9 +20,10 @@ public class PIMPage extends BasePage {
 		this.driver=driver;
 	}
 	
-	/*public String getPIMPagetitle() {
+	public String getPIMPagetitle() {
 		return driver.getTitle();
-	}*/
+	}
+	
 		public void GotoAdminPage() {
 			WebElement Admin=driver.findElement(Admintab);
 			Actions A=new Actions(driver);
