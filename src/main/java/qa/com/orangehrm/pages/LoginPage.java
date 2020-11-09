@@ -16,6 +16,7 @@ public class LoginPage extends BasePage {
 	By Password=By.id("txtPassword");
 	By Login=By.id("btnLogin");
 	By RemoveFrame=By.className("preview__action--close");
+	By pimpage=By.xpath("//*[@id=\"pim\"]/a/span");
 
 	//LoginPage Constructor
 	public LoginPage(WebDriver driver) {
@@ -26,12 +27,12 @@ public class LoginPage extends BasePage {
 	public void removeframe() {
 	driver.findElement(RemoveFrame).click();
 	
-	try { 
+	/*try { 
 	Thread.sleep(4000); 
 	}
 	catch (InterruptedException e) {
-	 e.printStackTrace(); }
-	 }
+	 e.printStackTrace(); }*/}
+	 
 	
 	public String getloginpagetitle() {
 	return driver.getTitle();
@@ -40,11 +41,14 @@ public class LoginPage extends BasePage {
 	driver.findElement(Usrname).sendKeys(loginid);
 	driver.findElement(Password).sendKeys(pwd);
 	driver.findElement(Login).click();
+	try {
+	 Thread.sleep(5000);}
+	catch (InterruptedException e) {
+		e.printStackTrace();
+	}
 	return new PIMPage(driver);
 	}
 	
-			
-	}
 	
-
+}
 	

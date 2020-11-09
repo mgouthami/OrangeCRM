@@ -8,11 +8,8 @@ public class AdminPage {
 	
 	public AdminPage(WebDriver driver) {
 		this.driver=driver;
-		
 	}
-	
 	public String getAdminpagetitle() {
 		return driver.getTitle();
 	}
-
 }

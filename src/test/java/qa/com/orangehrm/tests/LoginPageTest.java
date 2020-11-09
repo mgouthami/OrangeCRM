@@ -18,13 +18,16 @@ public class LoginPageTest {
 	BasePage basepage;
 	Properties prop;
 	LoginPage  loginpage;
+	PIMPage pimpage;
 
 	@BeforeTest
-	public void setUp() {
+	public void setUp() throws InterruptedException {
 	basepage=new BasePage();
 	prop=basepage.init_properties();
 	driver=basepage.init_driver(prop);
 	loginpage=new LoginPage(driver);
+   // pimpage=loginpage.dologin(prop.getProperty("username"), prop.getProperty("password"));
+
 
 	}
 	@Test(priority=1)
@@ -44,10 +47,12 @@ public class LoginPageTest {
 
 	}
 
-	@AfterTest
-	public void quit(){
-	driver.quit();
-	}
+		
 	
+//	@AfterTest
+//  public void quit(){
+//  driver.quit();
+//	}
 	
+
 }

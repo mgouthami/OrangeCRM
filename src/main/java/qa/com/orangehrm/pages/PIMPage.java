@@ -14,7 +14,7 @@ public class PIMPage extends BasePage {
 	By empId=By.id("empsearch[id]");
 	By Sname= By.xpath("#input[@name='empsearch[supervisor_name]']");
 	By Admintab=By.xpath("//*[@id=\"admin\"]/a/span");
-
+    By header=By.xpath("//*[@id='messagebar']/span");
 	
 	public PIMPage(WebDriver driver) {
 		this.driver=driver;
@@ -24,13 +24,15 @@ public class PIMPage extends BasePage {
 		return driver.getTitle();
 	}
 	
-		public void GotoAdminPage() {
-			WebElement Admin=driver.findElement(Admintab);
-			Actions A=new Actions(driver);
-			A.moveToElement(Admin).build().perform();
-			
-		}
-		
+	public String getheader() {
+		return driver.findElement(header).getText();
+	}
+	/*
+	 * public void GotoAdminPage() { WebElement Admin=driver.findElement(Admintab);
+	 * Actions A=new Actions(driver); A.moveToElement(Admin).build().perform();
+	 * 
+	 * }
+	 */
 	}
 
 
