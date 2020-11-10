@@ -1,10 +1,14 @@
 package qa.com.orangehrm.pages;
 
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import qa.com.orangehrm.base.BasePage;
 
@@ -17,6 +21,7 @@ public class LoginPage extends BasePage {
 	By Login=By.id("btnLogin");
 	By RemoveFrame=By.className("preview__action--close");
 	By pimpage=By.xpath("//*[@id=\"pim\"]/a/span");
+	By logout=By.xpath("/html/body/div[4]/ul/li[3]/a");
 
 	//LoginPage Constructor
 	public LoginPage(WebDriver driver) {
@@ -27,28 +32,31 @@ public class LoginPage extends BasePage {
 	public void removeframe() {
 	driver.findElement(RemoveFrame).click();
 	
-	/*try { 
+	try { 
 	Thread.sleep(4000); 
 	}
 	catch (InterruptedException e) {
-	 e.printStackTrace(); }*/}
+	 e.printStackTrace(); }}
 	 
 	
 	public String getloginpagetitle() {
 	return driver.getTitle();
 	}
 	public PIMPage dologin(String loginid, String pwd) {
-	driver.findElement(Usrname).sendKeys(loginid);
+		driver.findElement(Usrname).sendKeys(loginid);
+	try {
+	WebDriverWait wait=new WebDriverWait(driver,5);
+	wait.until(ExpectedConditions.presenceOfElementLocated(Usrname));
+	} catch (Exception e) {
+	 e.printStackTrace();
+	}
 	driver.findElement(Password).sendKeys(pwd);
 	driver.findElement(Login).click();
-	try {
-	 Thread.sleep(5000);}
-	catch (InterruptedException e) {
-		e.printStackTrace();
-	}
 	return new PIMPage(driver);
 	}
 	
-	
+	public void logout() {
+	driver.findElement(logout).click();
+	}
 }
 	

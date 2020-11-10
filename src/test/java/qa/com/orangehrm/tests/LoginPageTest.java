@@ -21,15 +21,13 @@ public class LoginPageTest {
 	PIMPage pimpage;
 
 	@BeforeTest
-	public void setUp() throws InterruptedException {
+	public void setUp() {
 	basepage=new BasePage();
 	prop=basepage.init_properties();
 	driver=basepage.init_driver(prop);
 	loginpage=new LoginPage(driver);
-   // pimpage=loginpage.dologin(prop.getProperty("username"), prop.getProperty("password"));
-
-
 	}
+	
 	@Test(priority=1)
 	public void removeframe() {
 	loginpage.removeframe();
@@ -41,13 +39,16 @@ public class LoginPageTest {
 	System.out.println(title);
 	Reporter.log("login page title is" + title );
 	}
+	
 	@Test(priority=3)
-	public void dologin(){
+	public void dologin() {
 	loginpage.dologin(prop.getProperty("username"), prop.getProperty("password"));
-
 	}
-
-		
+	
+	//public void logout() {
+	//	loginpage.logout();
+	
+//	}
 	
 //	@AfterTest
 //  public void quit(){

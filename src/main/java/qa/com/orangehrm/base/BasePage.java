@@ -20,7 +20,7 @@ public class BasePage {
 	Properties prop;
 	String browser;
 	
-	public WebDriver init_driver(Properties prop) throws InterruptedException {
+	public WebDriver init_driver(Properties prop) {
 		String browser=prop.getProperty("browser");
 		if(browser.equals("chrome")) {
 		WebDriverManager.chromedriver().setup();
@@ -33,7 +33,6 @@ public class BasePage {
 		WebDriverManager.iedriver().setup();
 		driver=new InternetExplorerDriver();}
 		driver.manage().window().maximize();
-		Thread.sleep(5000);
 		driver.get(prop.getProperty("url"));
 		try {
 			Thread.sleep(7000);

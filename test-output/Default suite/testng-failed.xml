@@ -5,8 +5,10 @@
     <classes>
       <class name="qa.com.orangehrm.tests.PIMPageTest">
         <methods>
-          <include name="getheader"/>
           <include name="setUp"/>
+          <include name="Verifyselectempstatus"/>
+          <include name="Verifyselectinclude"/>
+          <include name="verifysearchclick"/>
         </methods>
       </class> <!-- qa.com.orangehrm.tests.PIMPageTest -->
     </classes>

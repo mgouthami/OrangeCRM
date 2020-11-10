@@ -1,6 +1,7 @@
 package qa.com.orangehrm.tests;
 
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
@@ -21,19 +22,25 @@ public class PIMPageTest {
 	PIMPage pimpage;
 	
 	@BeforeTest
-	public void setUp() throws InterruptedException {
+	public void setUp() {
     basepage=new BasePage();
 	prop=basepage.init_properties();
-    driver=basepage.init_driver(prop);
+   driver=basepage.init_driver(prop);
 	loginpage=new LoginPage(driver);
+	loginpage.removeframe();
     pimpage=loginpage.dologin(prop.getProperty("username"), prop.getProperty("password"));
 }
-	
-	@Test
-	public void getheader() {
-		String header=pimpage.getheader();
-		System.out.println(header);
-
+	@Test(priority=1)
+	public void Verifyselectempstatus() {
+		pimpage.selectEmpstatus();
 	}
+	@Test(priority=2)
+	public void Verifyselectinclude() {
+		pimpage.selectInclude();
+	}
+	@Test(priority=3)
+	public void verifysearchclick() {
+		pimpage.clickSearch();
+	}
+		}
 	
-}
