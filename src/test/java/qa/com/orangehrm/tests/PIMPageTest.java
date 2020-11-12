@@ -30,17 +30,26 @@ public class PIMPageTest {
 	loginpage.removeframe();
     pimpage=loginpage.dologin(prop.getProperty("username"), prop.getProperty("password"));
 }
+
+/*
+ * @Test(priority=1) public void Verifyselectempstatus() throws
+ * InterruptedException { pimpage.selectEmpstatus(); }
+ * 
+ * @Test(priority=2) public void Verifyselectinclude() {
+ * pimpage.selectInclude(); }
+ * 
+ * @Test(priority=3) public void verifysearchclick() { pimpage.clickSearch(); }
+ */
 	@Test(priority=1)
-	public void Verifyselectempstatus() {
-		pimpage.selectEmpstatus();
+	public void VerifygotoPIMPage() {
+		pimpage.gotoPIMPage();
+		
 	}
 	@Test(priority=2)
-	public void Verifyselectinclude() {
-		pimpage.selectInclude();
-	}
-	@Test(priority=3)
-	public void verifysearchclick() {
-		pimpage.clickSearch();
-	}
-		}
+    public void verifygetpimlist() {
+     pimpage.getpimlist();}
+
+	/*
+	 * @Test(priority=5) public void logout() { pimpage.logout(); }
+	 */	}
 	

@@ -1,14 +1,19 @@
 package qa.com.orangehrm.tests;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Allactions {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		WebDriver driver;
 		WebDriverManager.chromedriver().setup();
@@ -28,8 +33,19 @@ public class Allactions {
         driver.findElement(By.id("txtUsername")).sendKeys("opensourcecms");
         driver.findElement(By.id("txtPassword")).sendKeys("opensourcecms");
 		driver.findElement(By.id("btnLogin")).click();
+		WebElement PIM=driver.findElement(By.xpath("//span[text()='PIM']"));
+
+		Actions action=new Actions(driver);
+		action.moveToElement(PIM).build().perform();
+
+		List<WebElement> pimlist=driver.findElements(By.xpath("//div[@id='top-menu']//ul//li/a[@class='l2_link reports']"));
+    	for(int i=0;i<pimlist.size();i++) {
+     String text=pimlist.get(i).getText();
+    System.out.println(text);}
+    
+		//driver.findElement(By.xpath("/html/body/div[4]/ul/li[3]/a")).click();
 		
-		driver.findElement(By.xpath("/html/body/div[4]/ul/li[3]/a")).click();
+		
 
 	}
 
