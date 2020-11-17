@@ -2,52 +2,52 @@
 <testng-results ignored="1" total="6" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-16T17:54:51Z" name="Default suite" finished-at="2020-11-16T17:55:28Z" duration-ms="36779">
+  <suite started-at="2020-11-17T08:15:00Z" name="Default suite" finished-at="2020-11-17T08:15:36Z" duration-ms="35675">
     <groups>
       <group name="demo">
         <method signature="PIMPageTest.VerifygotoPIMPage()[pri:0, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" name="VerifygotoPIMPage" class="qa.com.orangehrm.tests.PIMPageTest"/>
       </group> <!-- demo -->
     </groups>
-    <test started-at="2020-11-16T17:54:51Z" name="Default test" finished-at="2020-11-16T17:55:28Z" duration-ms="36779">
+    <test started-at="2020-11-17T08:15:00Z" name="Default test" finished-at="2020-11-17T08:15:36Z" duration-ms="35675">
       <class name="qa.com.orangehrm.tests.PIMPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-16T17:54:51Z" name="setUp" finished-at="2020-11-16T17:55:20Z" duration-ms="28853" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-17T08:15:00Z" name="setUp" finished-at="2020-11-17T08:15:28Z" duration-ms="27604" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="VerifygotoPIMPage()[pri:0, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-16T17:55:20Z" name="VerifygotoPIMPage" finished-at="2020-11-16T17:55:21Z" duration-ms="203" status="PASS">
+        <test-method signature="VerifygotoPIMPage()[pri:0, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-17T08:15:28Z" name="VerifygotoPIMPage" finished-at="2020-11-17T08:15:28Z" duration-ms="225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifygotoPIMPage -->
-        <test-method signature="verifygetpimlist()[pri:2, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-16T17:55:21Z" name="verifygetpimlist" finished-at="2020-11-16T17:55:21Z" duration-ms="149" status="PASS">
+        <test-method signature="verifygetpimlist()[pri:2, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-17T08:15:28Z" name="verifygetpimlist" finished-at="2020-11-17T08:15:28Z" duration-ms="224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifygetpimlist -->
-        <test-method signature="verifyselectCustomReports()[pri:4, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-16T17:55:21Z" name="verifyselectCustomReports" finished-at="2020-11-16T17:55:21Z" duration-ms="248" status="PASS">
+        <test-method signature="verifyselectCustomReports()[pri:4, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-17T08:15:28Z" name="verifyselectCustomReports" finished-at="2020-11-17T08:15:28Z" duration-ms="335" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyselectCustomReports -->
-        <test-method signature="verifycustomfields()[pri:5, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-16T17:55:21Z" name="verifycustomfields" finished-at="2020-11-16T17:55:28Z" duration-ms="7100" status="FAIL">
+        <test-method signature="verifycustomfields()[pri:5, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-17T08:15:28Z" name="verifycustomfields" finished-at="2020-11-17T08:15:36Z" duration-ms="7099" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#customField_name"}
-  (Session info: chrome=86.0.4240.193)
+  (Session info: chrome=86.0.4240.198)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'SAIBABA-PC', ip: '192.168.1.107', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '15'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.193, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\saibaba\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63814}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: f164713e6f6d8d52b98ed31699b9a38f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\saibaba\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49317}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c21e66251bdef457e3a299ad31ce3fbb
 *** Element info: {Using=id, value=customField_name}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#customField_name"}
-  (Session info: chrome=86.0.4240.193)
+  (Session info: chrome=86.0.4240.198)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'SAIBABA-PC', ip: '192.168.1.107', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '15'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.193, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\saibaba\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63814}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: f164713e6f6d8d52b98ed31699b9a38f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\saibaba\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49317}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c21e66251bdef457e3a299ad31ce3fbb
 *** Element info: {Using=id, value=customField_name}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
@@ -97,28 +97,28 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifycustomfields -->
-        <test-method signature="verifyAddCustom()[pri:6, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-16T17:55:28Z" name="verifyAddCustom" finished-at="2020-11-16T17:55:28Z" duration-ms="144" status="FAIL">
+        <test-method signature="verifyAddCustom()[pri:6, instance:qa.com.orangehrm.tests.PIMPageTest@6574a52c]" started-at="2020-11-17T08:15:36Z" name="verifyAddCustom" finished-at="2020-11-17T08:15:36Z" duration-ms="66" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#customField_name"}
-  (Session info: chrome=86.0.4240.193)
+  (Session info: chrome=86.0.4240.198)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'SAIBABA-PC', ip: '192.168.1.107', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '15'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.193, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\saibaba\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63814}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: f164713e6f6d8d52b98ed31699b9a38f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\saibaba\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49317}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c21e66251bdef457e3a299ad31ce3fbb
 *** Element info: {Using=id, value=customField_name}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#customField_name"}
-  (Session info: chrome=86.0.4240.193)
+  (Session info: chrome=86.0.4240.198)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'SAIBABA-PC', ip: '192.168.1.107', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '15'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.193, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\saibaba\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63814}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: f164713e6f6d8d52b98ed31699b9a38f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\saibaba\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49317}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c21e66251bdef457e3a299ad31ce3fbb
 *** Element info: {Using=id, value=customField_name}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
