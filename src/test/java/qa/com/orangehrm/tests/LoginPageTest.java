@@ -40,7 +40,7 @@ public class LoginPageTest {
 	Reporter.log("login page title is" + title );
 	}
 	
-	@Test(priority=3)
+	@Test( groups= {"demo"})
 	public void dologin() {
 	loginpage.dologin(prop.getProperty("username"), prop.getProperty("password"));
 	}

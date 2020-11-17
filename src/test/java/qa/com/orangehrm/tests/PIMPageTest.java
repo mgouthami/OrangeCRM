@@ -29,6 +29,7 @@ public class PIMPageTest {
 	loginpage=new LoginPage(driver);
 	loginpage.removeframe();
     pimpage=loginpage.dologin(prop.getProperty("username"), prop.getProperty("password"));
+    
 }
 
 /*
@@ -40,7 +41,7 @@ public class PIMPageTest {
  * 
  * @Test(priority=3) public void verifysearchclick() { pimpage.clickSearch(); }
  */
-	@Test(priority=1)
+	@Test(groups= {"demo"})
 	public void VerifygotoPIMPage() {
 		pimpage.gotoPIMPage();
 		
@@ -49,6 +50,23 @@ public class PIMPageTest {
     public void verifygetpimlist() {
      pimpage.getpimlist();}
 
+	@Test(enabled=false)
+	 public void verifyselectreports() {
+		pimpage.selectreports();
+	}
+	@Test(priority=4)
+	public void verifyselectCustomReports() {
+	 pimpage.selectCustomReports();
+	 
+	}
+	@Test(priority=5)
+	public void verifycustomfields() {
+		pimpage.customfields();
+	}
+	@Test(priority=6)
+   public void verifyAddCustom() {
+	   pimpage.AddCustom();
+   }
 	/*
 	 * @Test(priority=5) public void logout() { pimpage.logout(); }
 	 */	}

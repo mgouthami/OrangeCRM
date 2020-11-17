@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OrangCRM Regression Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="OrangCRM Regression Test(failed)">
+    <groups>
+      <run>
+        <include name="demo"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="qa.com.orangehrm.tests.HelpPageTest">
+        <methods>
+          <include name="selectBugTracker"/>
+        </methods>
+      </class> <!-- qa.com.orangehrm.tests.HelpPageTest -->
+      <class name="qa.com.orangehrm.tests.LoginPageTest">
+        <methods>
+          <include name="dologin"/>
+        </methods>
+      </class> <!-- qa.com.orangehrm.tests.LoginPageTest -->
+      <class name="qa.com.orangehrm.tests.PIMPageTest">
+        <methods>
+          <include name="VerifygotoPIMPage"/>
+        </methods>
+      </class> <!-- qa.com.orangehrm.tests.PIMPageTest -->
+    </classes>
+  </test> <!-- OrangCRM Regression Test(failed) -->
+</suite> <!-- Failed suite [OrangCRM Regression Suite] -->

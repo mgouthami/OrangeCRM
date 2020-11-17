@@ -5,8 +5,8 @@
   <test name="OrangCRM Sanity Test" >
     <classes>
        <class name="qa.com.orangehrm.tests.LoginPageTest" />
-<!--        <class name="qa.com.orangehrm.tests.PIMPageTest"/>
- -->       
+       <class name="qa.com.orangehrm.tests.PIMPageTest"/>
+       
     </classes>
   </test>
  

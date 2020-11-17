@@ -16,6 +16,8 @@ import qa.com.orangehrm.base.BasePage;
 public class PIMPage extends BasePage {
 	WebDriver driver;
     String text;
+    int i;
+    String list;
     
 	By empname = By.name("empsearch[employee_name][empName]");
 	By empId = By.id("empsearch[id]");
@@ -27,8 +29,11 @@ public class PIMPage extends BasePage {
 	By Include = By.xpath("//div[@id='formcontent']/label[3]");
 	By Search = By.xpath("//div/div/input[@id='searchBtn']");
 	By logout = By.xpath("/html/body/div[4]/ul/li[3]/a");
-	By PIM=By.xpath("//span[text()='PIM']");
-
+	By pimlist=By.xpath("/div[@id='top-menu']//ul//li[@id='pim']");
+    By Config=By.xpath("//div[@id='top-menu']//ul//li[@id='pim']//a//span[text()='Configuration']");
+    By Customname=By.id("customField_name");
+    
+    
 	public PIMPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -37,7 +42,7 @@ public class PIMPage extends BasePage {
 		return driver.getTitle();
 	}
 	
-	public void gotoPIMPage() {
+	public  void gotoPIMPage() {
 		
 	WebElement PIM=driver.findElement(By.xpath("//span[text()='PIM']"));
 
@@ -47,16 +52,70 @@ public class PIMPage extends BasePage {
 	}
 	
     public String getpimlist() {
-   List<WebElement> pimlist=driver.findElements(By.xpath("//div[@id='top-menu']//ul//li/a[@class='l2_link reports']"));
-    	for(int i=0;i<pimlist.size();i++) {
-     String text=pimlist.get(i).getText();
-    System.out.println(text);}
-		return text;
-    			
-    }
-    	
-    }
+   List<WebElement> pimlist=driver.findElements(By.xpath("//div[@id='top-menu']//ul//li[@id='pim']"));
+    	for(i=0;i<pimlist.size();i++) {
+     String text=pimlist.get(i).getText();}
+    System.out.println(text);
+	return text;
 
+		}
+    			
+    
+    
+  public void selectreports() {
+	  
+		WebElement report=driver.findElement(By.xpath("//div[@id='top-menu']//ul//li//span[text()='Reports']"));
+		Actions action=new Actions(driver);
+		action.moveToElement(report).build().perform();
+		report.click();
+		 
+  }
+  
+  public String selectCustomReports() {
+	//  driver.findElement(Config).click();
+	WebElement Config=driver.findElement(By.xpath("//div[@id='top-menu']//ul//li[@id='pim']//a//span[text()='Configuration']"));
+  Actions action=new Actions(driver);
+  action.moveToElement(Config).build().perform();
+
+	  List<WebElement> config=driver.findElements(By.xpath("//div[@id='top-menu']//ul//li[@id='pim']//a//span[text()='Termination Reasons']"));
+	  for(int i=0;i<config.size();i++) {
+	  String list=config.get(i).getText();}
+	  System.out.println(list);
+	  
+	  return list;
+
+	  }
+	  
+	  public void customfields()  {
+		
+		  WebElement custfields=driver.findElement(By.xpath("//div[@id='top-menu']//ul//li[@id='pim']//a//span[text()='Custom Fields']"));
+		  try {
+			  
+			Thread.sleep(7000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		  Actions action=new Actions(driver);
+		 // wait.until(ExpectedConditions.visibilityOf(custfields));
+        driver.findElement(Customname).sendKeys("ABC");
+		  WebDriverWait wait=new WebDriverWait(driver,15);
+        wait.until(ExpectedConditions.presenceOfElementLocated(Customname));
+        
+	  }
+	  
+	  public void AddCustom() {
+	        driver.findElement(By.id("customField_name")).sendKeys("ABC");
+	        Select select=new Select(driver.findElement(By.id("customField_screen")));
+	        select.selectByVisibleText("contact");
+	        Select select1=new Select(driver.findElement(By.id("customField_type")));
+
+	        select1.selectByValue("1");
+
+	  }
+	  
+  }
+  
 
 /*
  * public void selectEmpstatus() throws InterruptedException { WebDriverWait
