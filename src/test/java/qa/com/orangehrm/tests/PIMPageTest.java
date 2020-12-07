@@ -6,13 +6,15 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import qa.com.orangehrm.base.BasePage;
+import qa.com.orangehrm.listeners.TestAllureListener;
 import qa.com.orangehrm.pages.LoginPage;
 import qa.com.orangehrm.pages.PIMPage;
 
-
+@Listeners(TestAllureListener.class)
 public class PIMPageTest {
 	
 	WebDriver driver;

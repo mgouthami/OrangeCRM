@@ -5,9 +5,12 @@
     <classes>
       <class name="qa.com.orangehrm.tests.PIMPageTest">
         <methods>
+          <include name="VerifygotoPIMPage"/>
+          <include name="verifygetpimlist"/>
           <include name="setUp"/>
           <include name="verifycustomfields"/>
           <include name="verifyAddCustom"/>
+          <include name="verifyselectCustomReports"/>
         </methods>
       </class> <!-- qa.com.orangehrm.tests.PIMPageTest -->
     </classes>

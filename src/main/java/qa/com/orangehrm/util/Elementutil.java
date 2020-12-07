@@ -89,7 +89,7 @@ public class Elementutil {
 		return flag;
 	}
 	
-	public String getTitle() {
+	public String dogetTitle() {
 		String title=null;
 		try {
 		title=driver.getTitle();}

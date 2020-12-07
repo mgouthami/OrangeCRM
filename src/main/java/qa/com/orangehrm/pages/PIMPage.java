@@ -12,9 +12,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import qa.com.orangehrm.base.BasePage;
+import qa.com.orangehrm.util.Elementutil;
 
 public class PIMPage extends BasePage {
 	WebDriver driver;
+	Elementutil elementutil;
     String text;
     int i;
     String list;
@@ -32,17 +34,20 @@ public class PIMPage extends BasePage {
 	By pimlist=By.xpath("/div[@id='top-menu']//ul//li[@id='pim']");
     By Config=By.xpath("//div[@id='top-menu']//ul//li[@id='pim']//a//span[text()='Configuration']");
     By Customname=By.id("customField_name");
-    
+    By report=By.xpath("//div[@id='top-menu']//ul//li//span[text()='Reports']");
     
 	public PIMPage(WebDriver driver) {
 		this.driver = driver;
+		elementutil=new Elementutil(driver);
 	}
 
 	public String getPIMPagetitle() {
-		return driver.getTitle();
+		return elementutil.dogetTitle();
 	}
 	
+	
 	public  void gotoPIMPage() {
+		
 		
 	WebElement PIM=driver.findElement(By.xpath("//span[text()='PIM']"));
 
@@ -64,11 +69,14 @@ public class PIMPage extends BasePage {
     
   public void selectreports() {
 	  
-		WebElement report=driver.findElement(By.xpath("//div[@id='top-menu']//ul//li//span[text()='Reports']"));
-		Actions action=new Actions(driver);
-		action.moveToElement(report).build().perform();
-		report.click();
-		 
+	  elementutil.doActionClick(report);
+	  
+		/*
+		 * WebElement report=driver.findElement(By.xpath(
+		 * "//div[@id='top-menu']//ul//li//span[text()='Reports']")); Actions action=new
+		 * Actions(driver); action.moveToElement(report).build().perform();
+		 * report.click();
+		 */ 
   }
   
   public String selectCustomReports() {

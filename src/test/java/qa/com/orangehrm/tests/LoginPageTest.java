@@ -31,6 +31,7 @@ public class LoginPageTest {
 	@Test(priority=1)
 	public void removeframe() {
 	loginpage.removeframe();
+	
 	}
 	@Test(priority=2)
 	public void getloginpagetitle() {
