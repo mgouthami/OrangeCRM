@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [OrangCRM Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="qa.com.orangehrm.listeners.TestAllureListener"/>
+  </listeners>
   <test thread-count="5" name="OrangCRM Sanity Test(failed)">
     <classes>
+      <class name="qa.com.orangehrm.tests.LoginPageTest">
+        <methods>
+          <include name="removeframe"/>
+          <include name="setUp"/>
+          <include name="dologin"/>
+          <include name="getloginpagetitle"/>
+        </methods>
+      </class> <!-- qa.com.orangehrm.tests.LoginPageTest -->
       <class name="qa.com.orangehrm.tests.PIMPageTest">
         <methods>
+          <include name="VerifygotoPIMPage"/>
+          <include name="verifygetpimlist"/>
           <include name="setUp"/>
-          <include name="getPIMPagetitle"/>
-          <include name="GotoadminPage"/>
+          <include name="verifycustomfields"/>
+          <include name="verifyAddCustom"/>
+          <include name="verifyselectCustomReports"/>
         </methods>
       </class> <!-- qa.com.orangehrm.tests.PIMPageTest -->
     </classes>

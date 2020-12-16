@@ -38,7 +38,7 @@ public class Allactions {
 		Actions action=new Actions(driver);
 		action.moveToElement(PIM).build().perform();
 
-		List<WebElement> pimlist=driver.findElements(By.xpath("//div[@id='top-menu']//ul//li/a[@class='l2_link reports']"));
+		List<WebElement> pimlist=driver.findElements(By.xpath("/html/body//div//ul//li/a/span[@Class='drop current']"));
     	for(int i=0;i<pimlist.size();i++) {
      String text=pimlist.get(i).getText();
     System.out.println(text);}

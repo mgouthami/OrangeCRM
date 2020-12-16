@@ -22,6 +22,7 @@ public class LoginPage extends BasePage {
 	By Password=By.id("txtPassword");
 	By Login=By.id("btnLogin");
 	By RemoveFrame=By.className("preview__action--close");
+	//By RemoveFrame=By.xpath("/html/body/div[1]/div[2]/div/a/span");
 	By pimpage=By.xpath("//*[@id=\"pim\"]/a/span");
 	By logout=By.xpath("/html/body/div[4]/ul/li[3]/a");
 
@@ -33,13 +34,13 @@ public class LoginPage extends BasePage {
 	
 	//Page Actions/Libraries
 	public void removeframe() {
-	driver.findElement(RemoveFrame).click();
+	driver.findElement(RemoveFrame).click(); 
 	
 	try { 
 	Thread.sleep(4000); 
 	}
 	catch (InterruptedException e) {
-	 e.printStackTrace(); }}
+	 e.printStackTrace(); }} 
 	 
 	
 	public String getloginpagetitle() {

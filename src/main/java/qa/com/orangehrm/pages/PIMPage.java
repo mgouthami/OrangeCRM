@@ -61,9 +61,7 @@ public class PIMPage extends BasePage {
     	for(i=0;i<pimlist.size();i++) {
      String text=pimlist.get(i).getText();}
     System.out.println(text);
-	return text;
-
-		}
+	return text;}
     			
     
     

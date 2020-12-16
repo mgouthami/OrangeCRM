@@ -2,6 +2,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
   
 <suite name="OrangCRM Suite" verbose="1" >
+
+
+<listeners>
+ <listener class-name="qa.com.orangehrm.listeners.TestAllureListener"/>
+ 
+</listeners>
   <test name="OrangCRM Sanity Test" >
     <classes>
        <class name="qa.com.orangehrm.tests.LoginPageTest" />

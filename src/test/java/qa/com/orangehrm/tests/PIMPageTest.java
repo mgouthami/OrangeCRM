@@ -43,7 +43,7 @@ public class PIMPageTest {
  * 
  * @Test(priority=3) public void verifysearchclick() { pimpage.clickSearch(); }
  */
-	@Test(groups= {"demo"})
+	@Test(priority=1)
 	public void VerifygotoPIMPage() {
 		pimpage.gotoPIMPage();
 		
